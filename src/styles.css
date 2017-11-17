@@ -44,3 +44,8 @@ div.container > div.three
 .hersq-half-width {
   width: 50%;
 }
+
+.myCard {
+  width: 50%;
+  margin: auto;
+}

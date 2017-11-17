@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card class="myCard">
   <mat-card-title>Formulario</mat-card-title>
   <form class="hersq-form">
     <mat-form-field class="hersq-full-width">
@@ -117,6 +117,7 @@
       </mat-form-field>
     </div>
 
+    <!--Aptitudes-->
     <mat-form-field class="hersq-full-width">
       <mat-select [(ngModel)]="payload.workInHeightsAptitude" name="heights" placeholder="Apto para trabajos en altura">
         <mat-option *ngFor="let answer of answers" [value]="answer.value">
@@ -124,25 +125,21 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-
-    <!--Aptitudes-->
     <mat-checkbox class="hersq-full-width" [(ngModel)]="payload.workInHeights" name="workInHeights">
       Desarrolla trabajos en altura
     </mat-checkbox>
-
+    <!---->
     <mat-form-field class="hersq-full-width">
-      <mat-select [(ngModel)]="payload.workInReduceSpaceAptitude" name="confined"
-                  placeholder="Apto para trabajos en espacios confinados">
+      <mat-select [(ngModel)]="payload.workInReduceSpaceAptitude" name="confined" placeholder="Apto para trabajos en espacios confinados">
         <mat-option *ngFor="let answer of answers" [value]="answer.value">
           {{ answer.viewValue }}
         </mat-option>
       </mat-select>
     </mat-form-field>
-
     <mat-checkbox class="hersq-full-width" [(ngModel)]="payload.workInReduceSpace" name="workInConfined">
       Desarrolla trabajos en espacios confinados
     </mat-checkbox>
-
+    <!---->
     <mat-form-field class="hersq-full-width">
       <mat-select [(ngModel)]="payload.workWithChemicalSubstancesAptitude" name="chemical" placeholder="Apto para manejo de sustancias químicas">
         <mat-option *ngFor="let answer of answers" [value]="answer.value">
@@ -150,11 +147,10 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-
     <mat-checkbox class="hersq-full-width" [(ngModel)]="payload.workWithChemicalSubstances" name="workInChemicals">
       Desarrolla trabajo con sustancias químicas
     </mat-checkbox>
-
+    <!---->
     <mat-form-field class="hersq-full-width">
       <mat-select [(ngModel)]="payload.driverAptitude" name="driver" placeholder="Apto para conducción de vehículos">
         <mat-option *ngFor="let answer of answers" [value]="answer.value">
@@ -162,19 +158,17 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-
     <mat-checkbox class="hersq-full-width" [(ngModel)]="payload.driverWork" name="workInDriving">
       Desarrolla tareas conducción de vehículos
     </mat-checkbox>
-
-    <mat-form-field class="hersq-full-width">
-      <mat-select [(ngModel)]="payload.workWithChemicalSubstancesAptitude" name="chemical" placeholder="Apto para manejo de sustancias químicas">
-        <mat-option *ngFor="let answer of answers" [value]="answer.value">
-          {{ answer.viewValue }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-
+    <!---->
+    <!--<mat-form-field class="hersq-full-width">-->
+      <!--<mat-select [(ngModel)]="payload.driverAptitude" name="chemical" placeholder="Apto para manejo de sustancias químicas">-->
+        <!--<mat-option *ngFor="let answer of answers" [value]="answer.value">-->
+          <!--{{ answer.viewValue }}-->
+        <!--</mat-option>-->
+      <!--</mat-select>-->
+    <!--</mat-form-field>-->
     <mat-form-field class="hersq-full-width">
       <mat-select [(ngModel)]="payload.specialistExamRequired" name="specialistExamRequired" placeholder="Aplazado por condiciones que afectan el cargo">
         <mat-option *ngFor="let answer of yesNoQuestions" [value]="answer.value">
