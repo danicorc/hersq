@@ -90,7 +90,7 @@ export class AppComponent implements OnInit {
     this.payload.date.setHours(this.payload.hour, this.payload.min);
     delete this.payload.hour;
     delete this.payload.min;
-    console.log(this.payload);
+    this.payload.date = this.payload.date.toString();
     this.medicalConceptService.create(this.payload).then((response) => {
       this.startDate = new Date();
       this.payload = new Payload();

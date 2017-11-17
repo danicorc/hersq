@@ -13,8 +13,8 @@ import {MatNativeDateModule} from '@angular/material';
 import {MatSelectModule} from '@angular/material';
 import {MatCheckboxModule} from '@angular/material';
 // Mock
-import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
-import {InMemoryDataService} from './in-memory-data.service';
+// import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
+// import {InMemoryDataService} from './in-memory-data.service';
 import {MedicalConceptService} from './medical-concept.service';
 
 import {AppComponent} from './app.component';
@@ -34,7 +34,7 @@ import {AppComponent} from './app.component';
     MatNativeDateModule,
     MatSelectModule,
     MatCheckboxModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    // InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [MedicalConceptService],
   bootstrap: [AppComponent]
